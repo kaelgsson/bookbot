@@ -22,9 +22,9 @@ def sort_it(a_dict):
         if key.isalpha():
             listed_dicts.append({"char": key, "num": value})
     
-    listed_dicts.sort(reverse=True, key=sort_on)
+    sorted_list = sorted(listed_dicts, reverse=True, key=sort_on)
 
-    return listed_dicts
+    return sorted_list
 
 __all__ = ["get_num_words", "get_num_chars", "sort_it"]
 
