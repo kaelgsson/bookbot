@@ -12,10 +12,10 @@ def get_num_chars(text: str) -> dict:
             char_dict[_char] = 1
     return char_dict
 
-def sort_on(items):
+def sort_on(items: dict) -> int:
     return items["num"]
 
-def sort_it(a_dict):
+def sort_it(a_dict: dict) -> list:
     listed_dicts = []
 
     for key, value in a_dict.items():
