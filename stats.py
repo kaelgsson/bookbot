@@ -12,7 +12,21 @@ def get_num_chars(text: str) -> dict:
             char_dict[_char] = 1
     return char_dict
 
-__all__ = ["get_num_words", "get_num_chars"]
+def sort_on(items):
+    return items["num"]
+
+def sort_it(a_dict):
+    listed_dicts = []
+
+    for key, value in a_dict.items():
+        if key.isalpha():
+            listed_dicts.append({"char": key, "num": value})
+    
+    listed_dicts.sort(reverse=True, key=sort_on)
+
+    return listed_dicts
+
+__all__ = ["get_num_words", "get_num_chars", "sort_it"]
 
 if __name__ == "__main__":
     assert get_num_words("one two") == 2
